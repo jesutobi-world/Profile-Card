@@ -7,11 +7,13 @@
 body{
     font-family: 'Kumbh Sans', sans-serif;
     background-color: hsl(185, 75%, 39%);
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .container{
     height: 350px;
