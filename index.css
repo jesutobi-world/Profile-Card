@@ -7,19 +7,19 @@
 body{
     font-family: 'Kumbh Sans', sans-serif;
     background-color: hsl(185, 75%, 39%);
-    min-height: 100vh;
-    height: auto;
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
 }
 .container{
     height: 350px;
     width: 320px;
     border-radius: 15px;
     background-color: white;
+    z-index: 1000;
 }
 .top-div{
     position: relative;
@@ -41,7 +41,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-img{
+#img-victor{
     background-color: black;
     height: 100px;
     width: 100px;
@@ -50,7 +50,6 @@ img{
     left: calc(50% - 50px);
     top: calc(50% - 50px);
     border: 4px solid white;
-    outline: none;
 }
 
 #identity{
@@ -97,10 +96,35 @@ ul{
     margin-top: 5px;
     color: hsl(227, 10%, 46%);
 }
-
+#top-img{
+    position: absolute;
+    /* border: 2px solid black; */
+    width: 130%;
+    height: 130%;
+    top: -70%;
+    left: -45%;
+}
+#bottom-img{
+    position: absolute;
+    /* border: 2px solid red; */
+    width: 130%;
+    height: 130%;
+    bottom: -80%;
+    right: -45%;
+}
+#top-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+#bottom-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
 @media (max-width: 530px){
     body{
-        
+
     }
     .container{
         width: 70%;
@@ -120,5 +144,17 @@ ul{
     }
     .tag{
         font-size: 11px;
+    }
+    #top-img{
+        height: 80%;
+        width: 100%;
+        top: -40%;
+        left: -40%;
+    }
+    #bottom-img{
+        height: 80%;
+        width: 100%;
+        bottom: -40%;
+        right: -40%;
     }
 }
